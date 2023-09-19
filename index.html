@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Julian Klos - This is a Julian Klos website</title>
+<title>Julian Klos - Welcome to my website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -141,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">This is a Julian Klos website</h1>
+<h1 class="title">Welcome to my website</h1>
 </div>
 
 
@@ -156,10 +156,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>Welcome to my data science world.</p>
-<p>My name is Julian and I study at UTD and I will use this website to upload course content on Data Collection.</p>
+<p>My name is Julian and I study at UTD and I will use this website to upload course content. I am studying in the double-degree program International Political Economy at the University of Texas at Dallas, and at the Philipps-University Marburg (Germany)</p>
+<p>Here you can find a short CV of myself:</p>
+<p><embed src="images/CV (Julian Klos)-02.pdf" style="width:15cm;height:20cm"></p>
 <p>My Assignments:</p>
-<p><strong>Assignment 1 – Methods of Data Collection (Julian Klos)</strong></p>
+<p><strong>Assignment 1: Qualtrics Introduction</strong></p>
 <p>2. How is the survey structured?</p>
 <p>The survey starts with an introduction and appreciation of participation, which is probably part of the survey to incentivize the participants to complete the survey. After the introduction the survey continues with a question about the opinion on different topics related to movies and concerns like violence and sexual content in movies.</p>
 <p>After that question the survey seems to be structured without a reasonable concept. The questions about demographics are placed at the end of the survey, which is not common in surveys. The other questions aim at the willingness to pay for software and hardware (DVDs) and several different topics and are distributed in a random way. For example, some questions about if the participants has a DVD recorder, come after the question if the participant would like to have software that can control content of violence etc..</p>
@@ -179,6 +180,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>4. What is the difference between this block and the previous instrument?</p>
 <p>Adding a further block with questions about income and education implies that these questions were not designed for the specific survey of Diversity and Inclusiveness. For that reason, the questions should be adapted to the survey or our own questions should be formulated. Also, adding questions from other surveys can be formulated in another context, e.g., the income and education questions come from a survey for the US, but it could also be the case that it comes from a country in Africa, where the income scale should be adapted to the country where the actual survey will be conducted.</p>
 <p>https://utdallas.qualtrics.com/jfe/form/SV_beZJSTLyv5xCxEi</p>
+<p><strong>Assignment 2: Google Trends</strong></p>
+<p>Qualtrics Survey: https://utdallas.qualtrics.com/jfe/form/SV_71lvbXqq7u9ccVo</p>
+<p>1. Analyse the data</p>
+<p>I searched google trends on the terms Trump, Biden and Election. In the first result one can see the interest over time of those search terms. A value of 100 means the highest popularity, which also implies that a value of 50 means that the term was half as popular compared to the value 100. Therefore, google trends compares the popularity of the search term, which is a relative measure, as it searches for the most popular term at a specific time and sets it as a benchmark. I looked into the interest over time for the last 30 days. One can see that the term Trump was most popular on the 25<sup>th</sup> of August. The other search terms were very unpopular compared to that value since the highest score for Biden is 10 on the 14<sup>th</sup> of September. The term election also was very unpopular compared to Trump, with a value of 3 on a couple of days.</p>
+<p>After that I looked at the data for "Compared breakdown by subregion". In that category, you can see how big the shares of the terms were relative to all observations of those terms. I looked into those patterns on the state level and in every State, Trump was the most popular term out of the chosen.</p>
+<p>2. What are the differences between the two methods?</p>
+<p>If you download the data on google trends, you will get them in a csv format, which you can use in every processing software basically. Also, if you want to analyze all categories together, you need to download the data separately and then add them together manually. If you use R to analyze the data, you have the data all together and can use it more easily.</p>
+<p>R Code:</p>
+<p>install.packages(“haven”)</p>
+<p>install.packages(“gtrendsR”)</p>
+<p>library(haven)</p>
+<p>library(gtrendsR)</p>
+<p>Trump &lt;-gtrends(c(“Trump”,“Biden”, “Elections” ))</p>
+<p>View(Trump$interest_over_time)</p>
+<p>View(Trump$interest_by_country)</p>
+<p>View(Trump$related_queries)</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
