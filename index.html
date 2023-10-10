@@ -187,13 +187,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>https://utdallas.qualtrics.com/jfe/form/SV_71lvbXqq7u9ccVo</p>
 <p>1. Analyse the data</p>
 <p>I searched google trends on the terms Trump, Biden and Election. In the first result one can see the interest over time of those search terms. A value of 100 means the highest popularity, which also implies that a value of 50 means that the term was half as popular compared to the value 100. Therefore, google trends compares the popularity of the search term, which is a relative measure, as it searches for the most popular term at a specific time and sets it as a benchmark. I looked into the interest over time for the last 30 days. One can see that the term Trump was most popular on the 25<sup>th</sup> of August. The other search terms were very unpopular compared to that value since the highest score for Biden is 10 on the 14<sup>th</sup> of September. The term election also was very unpopular compared to Trump, with a value of 3 on a couple of days.</p>
-<p>After that I looked at the data for "Compared breakdown by subregion". In that category, you can see how big the shares of the terms were relative to all observations of those terms. I looked into those patterns on the state level and in every State, Trump was the most popular term out of the chosen.</p>
+<p>After that I looked at the data for “Compared breakdown by subregion”. In that category, you can see how big the shares of the terms were relative to all observations of those terms. I looked into those patterns on the state level and in every State, Trump was the most popular term out of the chosen.</p>
 <p>2. What are the differences between the two methods?</p>
 <p>If you download the data on google trends, you will get them in a csv format, which you can use in every processing software basically. Also, if you want to analyze all categories together, you need to download the data separately and then add them together manually. If you use R to analyze the data, you have the data all together and can use it more easily. Also, you have more possibilities to compare the data with different keywords and are able to perform sophisticated analysis.</p>
 <p>In the plot we can see the hits of the keywords transgender, feminism and woman rights. With R it is more easy to organize the data, because R provides to opportunity to perform many analysis. For example you can also use GIS methods and connect that with google trends data or social media data.</p>
 <p><img src="images/Transgender.png" class="img-fluid"></p>
+<p><strong>Assignment 3: Text Analysis</strong></p>
+<p>Analyzing summit data of Joe Biden and Xi Xingping with quanteda package.</p>
+<p>Analyzing summit data of Joe Biden and Xi Xingping with quanteda package.</p>
+<pre><code>First, we perform a Latent Semantic Analysis which analyzes the relationship between a set of documents, in this case tweets about the summit. We filter out the most connected hashtags of the data and find that the top tags in this analysis are: #china #biden #xijinping #joebiden #america #americans #coronavirus #fentanyl #xi #uyghurgenocide</code></pre>
+<p>After that we analyze the co-occurrence of the different tags. In the following figure we can see these relationships of the top tags.</p>
+<p><img src="images/Rplot.png" class="img-fluid"></p>
+<p>Next, we perform the same analysis with the @ and therefore the linked accounts or posting accounts in relation to the summit.</p>
+<p><img src="images/Rplot01.png" class="img-fluid"></p>
+<p>Afterwards we performed an analysis about US speeches.</p>
+<p><img src="images/Rplot02.png" class="img-fluid"></p>
+<p><img src="images/Rplot03-01.png" class="img-fluid"></p>
+<p>In those plots we can see the usage of the specific keywords for the different speeches of the presidents after 1949.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
