@@ -196,14 +196,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Analyzing summit data of Joe Biden and Xi Xingping with quanteda package.</p>
 <p>Analyzing summit data of Joe Biden and Xi Xingping with quanteda package.</p>
 <pre><code>First, we perform a Latent Semantic Analysis which analyzes the relationship between a set of documents, in this case tweets about the summit. We filter out the most connected hashtags of the data and find that the top tags in this analysis are: #china #biden #xijinping #joebiden #america #americans #coronavirus #fentanyl #xi #uyghurgenocide</code></pre>
-<p>After that we analyze the co-occurrence of the different tags. In the following figure we can see these relationships of the top tags.</p>
+<p>After that we analyze the co-occurrence of the different tags. In the following figure we can see these relationships of the top tags. When there are hash-tags about human rights they are often connected to the uyguhrs and also to the tibetians, while when there are hash-tags about Joe Biden, these hashtags are often connected to the hash-tags of fentanyl and coronavirus. Using this method can help in seeing how people connect topics with each other.</p>
 <p><img src="images/Rplot.png" class="img-fluid"></p>
 <p>Next, we perform the same analysis with the @ and therefore the linked accounts or posting accounts in relation to the summit.</p>
 <p><img src="images/Rplot01.png" class="img-fluid"></p>
 <p>Afterwards we performed an analysis about US speeches.</p>
 <p><img src="images/Rplot02.png" class="img-fluid"></p>
 <p><img src="images/Rplot03-01.png" class="img-fluid"></p>
-<p>In those plots we can see the usage of the specific keywords for the different speeches of the presidents after 1949.</p>
+<p>In those plots we can see the usage of the specific keywords for the different speeches of the presidents after 1949. Comparing the last three presidents, one can see that Obama and Biden use the word people more often in their speeches than Trump, which can also be a hint about the focus of the different campaigns of those presidents.</p>
+<p>What is Wordfish?</p>
+<p>Wordfish is a scaling model of one-dimensional document positions. Meaning that it is able to locate different documents on different positions, like party positions. With this tool it is possible to compare the change of a position in time-series data. For example it is possible to examine the change of party positions over time and compare changes in the political spectrum.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
